@@ -1,0 +1,21 @@
+{
+  "name": "htmlproject",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Ahmed Ahmed"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/ahmed-ahmed/empty-html-project",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "toastr": "~2.1.2"
+  }
+}
