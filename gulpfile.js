@@ -22,14 +22,14 @@ gulp.task('serve', ['inject'], function() {
     });
 
     gulp.watch(['src/index.html'], browserSync.reload);
-    gulp.watch(['src/*.js', 'src/*.js'], ['inject'], browserSync.stream);
+    gulp.watch(['src/**/*', 'src/*.js'], ['inject'], browserSync.stream);
 });
 
 
 gulp.task('inject', function() {
   gulp.src('src/index.html')
       .pipe(wiredep({}))
-      .pipe(inject(gulp.src(['src/*.js'], {read: false})))
-      .pipe(inject(gulp.src(['src/*.css'], {read: false})))
+      .pipe(inject(gulp.src(['src/*.js', 'src/**/*.js'], {read: false})))
+      .pipe(inject(gulp.src(['src/*.css', 'src/**/*.css'], {read: false})))
       .pipe(gulp.dest('src'));
 });

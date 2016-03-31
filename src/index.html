@@ -1,6 +1,10 @@
+<!doctype html>
 <html>
   <head>
-    <title>Hello</title>
+    <meta charset="utf-8">
+    <title>Hello World</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
     <!-- bower:css -->
     <link rel="stylesheet" href="../bower_components/toastr/toastr.css" />
     <!-- endbower -->
@@ -9,16 +13,23 @@
     <!-- endinject -->
 
   </head>
-  <body>
-    lol!
+  <body ng-app="app">
+    <!--[if lte IE 8]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <div ng-view=""></div>
 
 
     <!-- bower:js -->
     <script src="../bower_components/jquery/dist/jquery.js"></script>
     <script src="../bower_components/toastr/toastr.js"></script>
+    <script src="../bower_components/angular/angular.js"></script>
+    <script src="../bower_components/angular-route/angular-route.js"></script>
     <!-- endbower -->
     <!-- inject:js -->
     <script src="/src/app.js"></script>
+    <script src="/src/home/home.js"></script>
     <!-- endinject -->
   </body>
 </html>
